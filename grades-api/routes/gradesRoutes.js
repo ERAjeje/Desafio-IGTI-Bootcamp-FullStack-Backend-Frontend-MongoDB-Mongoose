@@ -7,9 +7,7 @@ import { getGrades,
          getGradesByType,
          postGrade,
          patchGradeById,
-         patchGradeByName,
          putGradeById,
-         putGradeByName,
          deleteGrade
 } from '../controllers/gradeController.js'
 
