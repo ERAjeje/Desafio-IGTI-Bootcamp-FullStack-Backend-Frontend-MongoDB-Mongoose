@@ -26,10 +26,8 @@ routes.get('/type/:type', getGradesByType);
 routes.post('/', postGrade);
 
 routes.patch('/', patchGradeById);
-routes.patch('/', patchGradeByName);
 
-routes.put('/id/:id', putGradeById);
-routes.put('/name/:Name', putGradeByName);
+routes.put('/', putGradeById);
 
 routes.delete('/:id', deleteGrade);
 
