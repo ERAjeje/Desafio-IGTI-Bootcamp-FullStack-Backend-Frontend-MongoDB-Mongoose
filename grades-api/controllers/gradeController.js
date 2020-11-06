@@ -64,7 +64,7 @@ export async function postGrade(req, res) {
 export async function patchGradeById(req, res) {
     const param = req.body;
     try{
-        const data = await Grade.findByIdAndUpdate(param)
+        const data = await Grade.findByIdAndUpdate(param._id, param)
         res.send(data);
     } catch (err){
         res.status(500).send({error: err})
