@@ -1,0 +1,39 @@
+import express from 'express';
+
+import { getGrades,
+         getGradesByName,
+         getGradesById,
+         getGradesBySubject,
+         getGradesByType,
+         postGrade,
+         patchGradeById,
+         patchGradeByName,
+         putGradeById,
+         putGradeByName,
+         deleteGrade
+} from '../controllers/gradeController.js'
+
+const routes = express();
+
+routes.use(express.json());
+
+routes.get('/', getGrades);
+routes.get('/name/:name', getGradesByName);
+routes.get('/id/:id', getGradesById);
+routes.get('/subject/:subject', getGradesBySubject);
+routes.get('/type/:type', getGradesByType);
+
+routes.post('/', postGrade);
+
+routes.patch('/id/:id', patchGradeById);
+routes.patch('/name/:Name', patchGradeByName);
+
+routes.put('/id/:id', putGradeById);
+routes.put('/name/:Name', putGradeByName);
+
+routes.delete('/:id', deleteGrade);
+
+export default routes;
+
+
+
