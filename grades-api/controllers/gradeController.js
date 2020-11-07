@@ -71,18 +71,22 @@ export async function patchGradeById(req, res) {
     }
 }
 
-export async function patchGradeByName(req, res) {
-
-}
-
 export async function putGradeById(req, res) {
-
-}
-
-export async function putGradeByName(req, res) {
-
+    const param = req.body;
+    try{
+        const data = await Grade.findByIdAndUpdate(param._id, param)
+        res.send(param);
+    } catch (err){
+        res.status(500).send({error: err})
+    }
 }
 
 export async function deleteGrade(req, res) {
-
+    const param = req.params.id;
+    try{
+        await Grade.findByIdAndDelete(param);
+        res.send({message: 'Documento excluido'})
+    } catch (err){
+        res.status(500).send({error: err})
+    }
 }
