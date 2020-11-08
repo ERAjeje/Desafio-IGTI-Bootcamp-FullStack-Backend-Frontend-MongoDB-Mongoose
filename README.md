@@ -14,6 +14,10 @@ Este trabalho consiste em utilizar os comandos do git para clonar o código dese
 - Axios
 - Bootstrap
 
+## Teste
+
+É possível realizar o teste do app através do link https://grades-app-ajeje.herokuapp.com/grade 
+
 
 ## Available Scripts Frontend
 
