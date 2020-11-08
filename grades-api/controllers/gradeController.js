@@ -2,7 +2,7 @@ import {db} from '../models/index.js';
 
 const Grade = db.grades;
 
-export async function getGrades(req, res) {
+export async function getGrades(_, res) {
     try{
         const data = await Grade.find();
         res.send(data);
@@ -74,7 +74,7 @@ export async function patchGradeById(req, res) {
 export async function putGradeById(req, res) {
     const param = req.body;
     try{
-        const data = await Grade.findByIdAndUpdate(param._id, param)
+        const data = await Grade.findByIdAndUpdate(req.params.id, param)
         res.send(param);
     } catch (err){
         res.status(500).send({error: err})

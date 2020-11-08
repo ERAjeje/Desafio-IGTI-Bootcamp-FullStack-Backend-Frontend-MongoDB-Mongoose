@@ -87,7 +87,6 @@ const Grade = (props) => {
                 className="form-control"
                 id="type"
                 name="type"
-                value={currentGrade.type}
                 onChange={handleInputChange}
               />
             </div>
@@ -98,7 +97,6 @@ const Grade = (props) => {
                 className="form-control"
                 id="value"
                 name="value"
-                value={currentGrade.value}
                 onChange={handleInputChange}
               />
             </div>

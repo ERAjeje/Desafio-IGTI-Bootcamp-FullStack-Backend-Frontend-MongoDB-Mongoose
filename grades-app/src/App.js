@@ -6,6 +6,7 @@ import './App.css';
 import AddGrade from './components/AddGrade';
 import Grade from './components/Grade';
 import GradeList from './components/GradeList';
+import GradesClass from './components/GradesClass';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           <Switch>
             <Route exact path={['/', '/grade']} component={GradeList} />
             <Route exact path="/add" component={AddGrade} />
-            <Route path="/grade/:id" component={Grade} />
+            <Route path="/grade/:id" component={GradesClass} />
           </Switch>
         </div>
       </div>
